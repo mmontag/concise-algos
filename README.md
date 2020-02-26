@@ -1,2 +1,2 @@
 # concise-algorithms
-Algorithms reduced to their essence.
+Algorithms and data structures for memorization.
