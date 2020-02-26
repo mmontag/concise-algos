@@ -1,3 +1,18 @@
+/*
+The binary heap is backed by an array. 
+The heap can be traversed as follows:
+
+If array is 0-based:
+  Parent      = (i - 1) / 2
+  Left child  = 2 * i + 1
+  Right child = 2 * i + 2
+
+If array is 1-based:
+  Parent      = i / 2
+  Left child  = 2 * i
+  Right child = 2 * i + 1
+*/
+
 const heap = [];
 
 insert(value) {
@@ -11,17 +26,7 @@ extractMin() {
   siftDown(0);
   return value;
 }
-/*
-If array is 0-based:
-  Parent      = (i - 1) / 2
-  Left child  = 2 * i + 1
-  Right child = 2 * i + 2
 
-If array is 1-based:
-  Parent      = i / 2
-  Left child  = 2 * i
-  Right child = 2 * i + 1
-*/
 bubbleUp() {
   let index = heap.length - 1;
   while (index > 0) {
